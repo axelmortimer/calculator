@@ -1,15 +1,86 @@
-body {
+* {
    box-sizing: border-box;
+}
+
+body {
    height: 100vh;
    width: 100vw;
    display: flex;
    justify-content: center;
    align-items: center;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: rgb(159, 176, 255);
 }
 
 .calculator {
    height: 800px;
-   width: 600px;
-   background-color: #000;
+   width: 540px;
+   background-color: #ffffff;
    display: flex;
+   flex-direction: column;
+   border-radius: 16px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   padding: 48px;
+   gap: 48px;
+}
+
+.display {
+   height: 160px;
+   width: 100%;
+   font-size: 72px;
+   text-align: right;
+   padding: 24px;
+}
+
+.results, .history {
+   text-align: right;
+}
+
+.history {
+   height: 40px;
+   color: rgb(60, 60, 60);
+   font-size: 24px;
+}
+
+.keypad {
+   display: flex;
+   gap: 24px;
+}
+
+.data-entry, .operators {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+}
+
+.data-entry {
+
+}
+
+.data-entry > button, .operators > button {
+   width: 96px;
+   height: 96px;
+   border-radius: 100%;
+   font-size: 32px;
+   font-weight: 700px;
+   border: none;
+}
+
+.data-entry > button.control {
+   width: 146px;
+   height: 80px;
+   margin: 8px 0;
+   border-radius: 24px;
+   background-color: rgb(196, 196, 196);
+}
+
+.data-entry > button.zero {
+   width: 192px;
+   border-radius: 64px;
+}
+
+.operators > button {
+   background-color: rgb(87, 87, 255);
+   color: white;
+   font-size: 48px;
 }
